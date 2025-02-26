@@ -17,6 +17,9 @@ I first examined the structure and formats of the target datasets, identifying t
 I then loaded and explored the dataset, analyzing its structure, inconsistencies and making it more fit for the research purposes. I created a Jupyter Notebook named Data-Parsing-Exploratory-Analysis.ipynb to document the steps taken, including initial parsing, data structuring and analysis to discover inconsitencies with the corpora before diving into the datasets to find traces of Catalan's substitution.\
 As part of the exploratory analysis to find any issues before working with the data, I performed surface-level data cleaning, such as removing the title from the text's content, calculated summary statistics for each of the corpora individually and as a whole, and visualized key distributions mostly focusing on timespan coverage. This helped in understanding the overall quality and usability of the dataset for the next stage of processing.
 
+See: [Sample data repo](https://github.com/Data-Science-for-Linguists-2025/Linguistic-Markers-Catalan-Substitution/tree/main/data_samples) for data samples\
+See: [Data-Parsing-Exploratory-Analysis](https://github.com/Data-Science-for-Linguists-2025/Linguistic-Markers-Catalan-Substitution/blob/main/Data-Parsing-Exploratory-Analysis.ipynb) for a close look at the data processing and analysis of the corpora
+
 #### Next Steps:
 **A soon as possible:**
 1) Get data to bridge the gap between the CLTIC corpora and the ParlaMint and Parla Parlament Corpora, that is, Catalan data between 1900-2010. Possibly radioteca's transcription of radio program through web scrapping, and parsing with Beautiful Soup. Otherwise, I need to find another corpora or be mindful of that gap during my exploration.

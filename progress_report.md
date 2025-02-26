@@ -26,3 +26,9 @@ As part of the exploratory analysis to find any issues before working with the d
 **Next steps after data adquisition, organization and exploration:**
 * Apply transformations needed for further analysis.
 * Prepare the dataset for model training and statistical examination.
+
+#### Data Sharing plan:
+Since data comes from various resources I will be required to follow the license of the most restrictive one.\
+For the CLTIC corpora the files published before 1985 are open for unrestricted free download individually as a single file.\
+For the Parlament Parla and ParlaMint corpora, they were published under Creative Commons Attribution 4.0 International that allows for re-distribution and re-use of a licensed work on the condition that the creator is appropriately credited.\
+Accordingly, my data will be shared under Creative Commons Attribution 4.0 International, unless I bridge the time gap and data-amount difference in my current data by using a corpora that has a more restrictive license. Then, I would have to change this plan. 

@@ -37,22 +37,22 @@ For the Parlament Parla and ParlaMint corpora, they were published under Creativ
 Accordingly, my data will be shared under Creative Commons Attribution 4.0 International, unless I bridge the time gap and data-amount difference in my current data by using a corpora that has a more restrictive license. Then, I would have to change this plan. 
 
 ### Progress Report 2 - Wraping up and adjusting the data
-03/21/2025\
+03/23/2025\
 **Current stage:** Final data adquisition steps, exploratory analysis and adjusting data to our purposes.\
-**Next step in current stage:** Finishing post-changes and data-reshaping EDA.\
+**Next step in current stage:** Tokenizing, which I didn't think about before but probably will be helpful later.\
 **Next stage:** Diving into the analysis of the data
 
 #### Progress
-The first progress report and the conclusions during the exploratory analysis highlighted some issues with the data. The main goal I worked towards, documented in this progress report, was to solve those issues.
+The first progress report and the conclusions during the exploratory analysis highlighted some issues with the data. The main goal I worked towards, documented in this second progress report, was to solve those issues.
 
 The **first problem** was a very evident time gap in the corpora. We had no data for the years around the change of century. A fourth resource was found and brought in to patch this gap after receiving permission from the owner, as this is a personal project. The data is "radioteca.cat", a web library of radio emissions in Catalan, summarized and transcribed through AI, later human-revised. The content was web-scraped using Beautiful Soup. The resulting data frame went through Exploratory Data Analysis as with the other three corpora. 
 
-The **second issue**, further emphasized with the addition of this last resource, was the heavily unbalanced distribution of our data. Three strategies were pursued with the goal of keeping the most representative and unbiased part of the data while reducing its amount. **(1)** First, a limit of 1500 characters per individual contributor was set, avoiding XYZ. **(2)** Secondly, for Radioteca, a limit of 1500 characters per episode was set, aiming for less topic-specific data. **(3)** Lastly, the previous approach of setting all parliament-parla's dates as the average date for the corpora, since no specific metadata was provided, was also contributing to an unnatural unbalance. Hence, the dates were reorganized through randomization in the range. 
+The **second issue**, further emphasized with the addition of this last resource, was the heavily unbalanced distribution of our data. Three strategies were pursued with the goal of keeping the most representative and unbiased part of the data while reducing its amount. **(1)** First, a limit of 1500 characters per individual contributor was set avoiding too much speaker-specific information. **(2)** Secondly, for Radioteca, a limit of 1500 characters per episode was set, aiming for less topic-specific data. **(3)** Lastly, the previous approach of setting all parliament-parla's dates as the average date for the corpora, since no specific metadata was provided, was also contributing to an unnatural imbalance. Hence, the dates were reorganized through randomization in the range. 
 
-After the changes, the merged dataset was rebuilt, and the exploratory data analysis was started to check how these changes had reshaped our data and see if it now suits our needs and is ready to be worked on.
+After the changes, the merged dataset was rebuilt, and the exploratory data analysis was re-done to check how these changes had reshaped our data and see if it now suits our needs and is ready to be worked on.
 
-All these changes and progress were made in the existing Jupyter Notebook for Data Parsing and Exploratory Analysis.\
-See: [Data-Parsing-Exploratory-Analysis](https://github.com/Data-Science-for-Linguists-2025/Linguistic-Markers-Catalan-Substitution/blob/main/Data-Parsing-Exploratory-Analysis.ipynb) for a close look at it.\
+All these changes and progress were made in the copy of the original Jupyter Notebook for Data Parsing and Exploratory Analysis, named Data Parsing and Exploratory Analysis 2.\
+See: [Data-Parsing-Exploratory-Analysis-2](https://github.com/Data-Science-for-Linguists-2025/Linguistic-Markers-Catalan-Substitution/blob/main/Data-Parsing-Exploratory-Analysis-2.ipynb) for a close look at it.\
 See: [Sample data repo](https://github.com/Data-Science-for-Linguists-2025/Linguistic-Markers-Catalan-Substitution/tree/main/data_samples) for data samples
 
 #### Data Sharing plan:
@@ -64,4 +64,4 @@ As mentioned previously, CTILC only allows individual file downloads; hence, to 
 For the Radioteca data frame, since the web-scraping process took a long time and the data can't be found anywhere else or in any other than web format, it might be worth sharing for other projects' use. However, I'm still awaiting the owner's confirmation and reviewing any radio shows and transcription licensing issues. If possible, the data frame for Radioteca will be made available with citations to the original Radioteca web page and this project. 
 
 #### License:
-I'm still very uncertain on the license because of what was mentioned previously. I want to share the Radioteca dataframe in terms of data for reuse. That is limiting my license plan progress.
+I'm still very uncertain about the License because of what was mentioned previously. I want to share the Radioteca data frame in terms of data for reuse. That is limiting my license plan progress. Except for the data portion, the License can be found in: [License.md](https://github.com/Data-Science-for-Linguists-2025/Linguistic-Markers-Catalan-Substitution/blob/main/LICENSE.md) I decided to go with this simple and permissive License because I build on other people's code many times, I don't think I could learn as much without it as a resource, so I hope to allow others to do the same off of mine.

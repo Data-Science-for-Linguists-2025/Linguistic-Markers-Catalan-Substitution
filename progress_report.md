@@ -99,4 +99,5 @@ Wraping up the conclusions of the previous analysis outcomes'.
 4. Text-level analysis
 
 No additions have been made to the data folder, and the license stands the same.\
+The link to my guestbook has been added to the README.md.\
 **Note:** I am not sure I like the approach with the percentage on the overall tokens to account for the size of the document. I might try to find another way to solve the issue.

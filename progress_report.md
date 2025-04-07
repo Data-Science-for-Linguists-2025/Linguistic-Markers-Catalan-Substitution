@@ -72,7 +72,7 @@ I'm still very uncertain about the License because of what was mentioned previou
 **Next step in current stage:** Finishing low level analysis (7/8) and starting text level analysis. (8/8).
 
 #### Progress
-To wrap-up my data I used Stanford's Stanza to tokenize all of the files. This final step of the "data" section is reported and completed in [Data-Parsing-Exploratory-Analysis-2](https://github.com/Data-Science-for-Linguists-2025/Linguistic-Markers-Catalan-Substitution/blob/main/Data-Parsing-Exploratory-Analysis-2.ipynb). However, the tokenization itself was done using Pitt's supercomuputing through command line, for a more efficient processing. The files used for the tokenization (slurm and python script) can be found in the newly created [scripts folder](https://github.com/Data-Science-for-Linguists-2025/Linguistic-Markers-Catalan-Substitution/tree/main/scripts) in their respective format.
+To wrap-up my data I used Stanford's Stanza to tokenize all of the files. This final step of the "data" section is reported and completed in [Data-Parsing-Exploratory-Analysis-2](https://github.com/Data-Science-for-Linguists-2025/Linguistic-Markers-Catalan-Substitution/blob/main/Data-Parsing-Exploratory-Analysis-2.ipynb). It follows "Conclusion after data frame modifications EDA" section, right at the bottom of the notebook. However, the tokenization itself was done using Pitt's supercomuputing through command line, for a more efficient processing. The files used for the tokenization (slurm and python script) can be found in the newly created [scripts folder](https://github.com/Data-Science-for-Linguists-2025/Linguistic-Markers-Catalan-Substitution/tree/main/scripts) in their respective format.
 
 I started the analysis which will be divided in two levels and done separately in two notebooks: 
 1. [Analysis 1 Low Level](https://github.com/Data-Science-for-Linguists-2025/Linguistic-Markers-Catalan-Substitution/blob/main/Analysis-1-LowLevel.ipynb)
@@ -81,20 +81,22 @@ I started the analysis which will be divided in two levels and done separately i
 The second analysis notebook is just a placeholder at the moment. The analysis work so far has been done at the low level in Analysis 1.\
 For the analysis, the points I wanted to explore as presented in the project plan where: (1) Loss of Word Classes, (2) Time and Space Lexicon Modification, (3) Syntactic Restructuring and then as number (4) doing a Text-Level Analysis using Machine Learning. (You can refer to the initial ideas on [project plan](https://github.com/Data-Science-for-Linguists-2025/Linguistic-Markers-Catalan-Substitution/blob/main/project_plan.md)).\
 Before diving into them in the analysis 1 notebook I did a brief recap analysis of the data to re-fresh what I'm working with.\
-For the analysis sections, each of the exploration lines starts with a brief background on that specific feature of Catalan, and some key points that will help us do the analysis. Then I dive into the analysis itself, although in some situations it required adding some layers to our dataframe, as for example Lemmatization for point 2.1 which was also run on Pitt's supercomputing. The files can be found on the notebook and separately in the [scripts folder](https://github.com/Data-Science-for-Linguists-2025/Linguistic-Markers-Catalan-Substitution/tree/main/scripts).\ After the analysis, there's a few lines of conclusion that still have to be revised and improved. At the end of the whole notebook there will be a general overall conclusion.\
-So far I've started the exploration with:\
-(1) Loss of Word Classes through the frequency of the Pronom Feble "Hi", using the tokenization column. Does not seem to be significant in any way.\
-(2) Time and space lexicon modification through:\
-    (2.1) Anar and Venir directional distinction frequency analysis. After using lemmatization and comparing the use of anar and venir it seems like      there is a clear tendency that might be indicating a meaning shift. However, it is not necessarly showing one verb's replacement by the other.\
-    (2.2) Time lexicon modification through Frequency Analysis of Passat Perifràstic, using the tokenization column again. Shows no clear patterns.
+For the analysis sections, each of the exploration lines starts with a brief background on that specific feature of Catalan, and some key points that will help us do the analysis. Then I dive into the analysis itself, although in some situations it required adding some layers to our dataframe, as for example Lemmatization for point 2.1 which was also run on Pitt's supercomputing. The files can be found on the notebook and separately in the [scripts folder](https://github.com/Data-Science-for-Linguists-2025/Linguistic-Markers-Catalan-Substitution/tree/main/scripts).\
+After the analysis, there's a few lines of conclusion that still have to be revised and improved. At the end of the notebook there will be a general overall conclusion.\
+So far I've started the exploration with:
+1. Loss of Word Classes through the frequency of the Pronom Feble "Hi", using the tokenization column. Does not seem to be significant in any way.
+2. Time and space lexicon modification through:
+    * 2.1. Anar and Venir directional distinction frequency analysis. After using lemmatization and comparing the use of anar and venir it seems like      there is a clear tendency that might be indicating a meaning shift. However, it is not necessarly showing one verb's replacement by the other.
+    * 2.2. Time lexicon modification through Frequency Analysis of Passat Perifràstic, using the tokenization column again. Shows no clear patterns.
 
 The next analysis efforts will be on:\
-Wraping up the conclusions of the previous analysis outcomes'.\
-(2.3) Pronominalization of movement verbs still for time and space lexicon modification analysis\
-(3) Syntactic restructuring through:\
-    (3.1) Tenir que vs haver de
-    (3.2) Deletion of subject pronouns\
-    (3.3) Deletion of "en" in partitive expressions\
-(4)  Text-level analysis
+Wraping up the conclusions of the previous analysis outcomes'.
+* 2.3 Pronominalization of movement verbs still for time and space lexicon modification analysis
+3. Syntactic restructuring through:
+* 3.1 Tenir que vs haver de
+* 3.2 Deletion of subject pronouns
+* 3.3 Deletion of "en" in partitive expressions
+4. Text-level analysis
 
-No additions have been made to the data folder, and the license stands the same. 
+No additions have been made to the data folder, and the license stands the same.\
+**Note:** I am not sure I like the approach with the percentage on the overall tokens to account for the size of the document. I might try to find another way to solve the issue.

@@ -32,7 +32,7 @@ The following files have been listed in chronological order, they follow the tim
 - [scripts](https://github.com/Data-Science-for-Linguists-2025/Linguistic-Markers-Catalan-Substitution/tree/main/scripts): folder containing python (.py) and slurm (.sh) files used for processing the data using Pitt's CRC
 - [Linguistic-Markers-of-Substitution_Presentation.pdf](https://github.com/Data-Science-for-Linguists-2025/Linguistic-Markers-Catalan-Substitution/blob/main/Linguistic-Markers-of-Substitution_Presentation.pdf): slides for the presentation of the project
 - [LICENSE.md](LICENSE.md): MIT License for the Project
-- [obsolete_files](POSARLINK): **TO DO** Folder containing notebooks that are no longer in the project progress line
+- [obsolete_files](https://github.com/Data-Science-for-Linguists-2025/Linguistic-Markers-Catalan-Substitution/tree/main/obsolete_files): Folder containing notebooks that are no longer in the project progress line
 
 ## Guestbook: 
 - [Guestbook](https://github.com/Data-Science-for-Linguists-2025/Class-Lounge/blob/main/guestbooks/jana.md)

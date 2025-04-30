@@ -69,15 +69,15 @@ Link to analysis section: [Analysis-1-LowLevel.ipynb](https://github.com/Data-Sc
 **Hypothesis:** Since in Spanish the distinction between motion away from and toward the speaker in verbs is less strict, the distinction might be getting blurred with one of the two verbs expanding its use into contexts formerly reserved for the other.\ 
 **Method:** The text was lemmatized so we could find any form of the verbs with their infinitive form. Then, the verbs were found in the lemmatized text and stored in two separate lists in two separate columns. The count for them was calculated and added across the texts belonging to the same yeare and then turned into a percentage out of the total tokens for that year. 
 **Results:** There is a significant change in the use of "anar" which has been increasing over time. However, that has not affected the use of "venir" which is stable all throughout our data. These results support an extension of the verb "anar", whose use has been broadened. However, unlike what we predicted, this has not affected "venir".
-![png](AnarVenir_Regression.png)
-![png](AnarVenir_Bar.png)
+![png](images/AnarVenir_Regression.png)
+![png](images/AnarVenir_Bar.png)
 
 ### 3.2.2 Perifrastic Past
 **Context:** Perifrastic past in Catalan is a verb tense used to express past tense actions that were done in the past and have been finished. It is formed with "anar" in the past tense as the auxiliary plus the main verb in its infinitive form. It is equivalent to Past Simple, which we also have in Catalan.\
 **Hypothesis:** Since in Spanish perifrastic past does not exist, its use might be dropping as we can use other past tenses in its place.\
 **Method:** Using the lemmatized text verbs forms matching the pattern for Perifrastic Past were found using regex. Then they were counted and turned into a percentage being the proportion of Perifrastic Past instances out of the total tokens in that dataframe.
 **Results:** There is no significant change in the use of Perifrastic Past. No tendencies can be found in its use throughout the years.
-![png](PassatPerifrastic_Bar.png)
+![png](images/PassatPerifrastic_Bar.png)
 
 ### 3.2.1 Haver de VS Tenir que
 **Context:** In Catalan the periphrase "Haver de" is used for tasks and obligations. In Spanish the periphrase for that context is "Tener que", which would be literally translated to Catalan as "Tenir que", as "tenir" is "tener", both meaning "to have".

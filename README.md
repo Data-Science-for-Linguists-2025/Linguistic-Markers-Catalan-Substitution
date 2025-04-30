@@ -2,16 +2,16 @@
 Jana Bruses | janabruses@pitt.edu | University of Pittsburgh | Apr 29th
 
 Welcome to my term project for Data Science for Linguists!\
-Linguistic Markers of Catalan Substitution is an analysis aming to find linguistic traces of Catalan's endangerment due to language substitution. 
-This project examines morphological, syntactic, lexical, semantic and text-level changes looking for empirical evidence in language that Catalan is undergoing a substitution process. It's goal is to detect some symptoms that allow us to quantify and evaluate the substitution process, allowing us to undersand more about language endangerment in a rare situation where we are aware of Catalan's endangerment when it is still at the lowest level of endangerement according to UNESCO.  
+Linguistic Markers of Catalan Substitution is an analysis aimed at finding linguistic traces of Catalan's endangerment due to language substitution. 
+This project examines morphological, syntactic, lexical, semantic, and text-level changes, looking for empirical evidence in language that Catalan is undergoing a substitution process. Its goal is to detect some symptoms that allow us to quantify and evaluate the substitution process, allowing us to understand more about language endangerment in a rare situation where we are aware of Catalan's endangerment when it is still at the lowest level of endangerment according to UNESCO.  
 
-As the analysis is looking at changes through time it required data that span a long enough time period. A single corpora was unavaliable, so four separate corpora were used:\
+As the analysis is looking at changes through time it required data that span a long enough time period. A single corpora was unavailable, so four separate corpora were used:\
 [CTILC](https://ctilc.iec.cat/scripts/CTILCCorpus_Descarr.asp)
 [ParlaMint](clarin-eric.github.io/ParlaMint/)\
 [ParlamentParla](https://doi.org/10.5281/zenodo.5541827)\
 [Radioteca.cat](https://radioteca.cat/)\
-The resulting data consisists of about three billion tokens from seventy five thousand text pieces (meaning individual speaker contributions.) The data spans from 1860 to 2022. However, we have a lot more data from recent years, so the average year for the contributions is about 2008.\
-This information is subject to change due to some issues found during the analysis. However, since the analysis portion hasn't been re-done with the newly adquired, parsed and explored dataframe, for now the data used is what stated before. 
+The resulting data consists of about three billion tokens from seventy-five thousand text pieces (meaning individual speaker contributions.) The data spans from 1860 to 2022. However, we have a lot more data from recent years, so the average year for the contributions is about 2008.\
+This information is subject to change due to some issues found during the analysis. However, since the analysis portion hasn't been re-done with the newly acquired, parsed, and explored data frame, for now, the data used is what was stated before. 
 
 ## Directory:
 - **[final_report.md](final_report.md)**: **TO DO** Concluding report of the project for term submission

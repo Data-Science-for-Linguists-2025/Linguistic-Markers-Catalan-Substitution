@@ -12,7 +12,7 @@ While there is the misconception that word incorporations are the most remarkabl
 2. Time and space lexicon modification.
 3. Syntactic restructuring.
 
-In this project, we look at specific pieces of Catalan representative of each of these areas of potential loss. The specifics can be found in the Analysis. [POSAR LINK]
+In this project, we look at specific pieces of Catalan representative of each of these areas of potential loss. The specifics can be found in the Analysis. [Analysis-1-LowLevel](https://github.com/Data-Science-for-Linguists-2025/Linguistic-Markers-Catalan-Substitution/blob/main/Analysis-1-LowLevel.ipynb)|[nbviewer](https://nbviewer.org/github/Data-Science-for-Linguists-2025/Linguistic-Markers-Catalan-Substitution/blob/main/Analysis-1-LowLevel.ipynb)
 
 ## 2. Data
 ### 2.1 Overview
@@ -27,22 +27,20 @@ Specifically, the data used in this project consisted of:
 | **ParlaMint-ES-CT**                 | 2015–2022            | Multilingual/Comparable Parliament corpus  |
 | **Radioteca.cat**   | 1985-2025 | Library of AI transcribed Radio broadcasts |
 
-Initially, Radioteca.cat was not included in our data as it is less genre-specific. That is, Radioteca.cat is more informal than any of the other sources of data we have. However, as can be seen in (LINKHERE), using only the first three dataframes gave us a gap from 1926 to 2007. Therefore, Radioteca.cat was brought in.
+Initially, Radioteca.cat was not included in our data as it is less genre-specific. That is, Radioteca.cat is more informal than any of the other sources of data we have. However, using only the first three dataframes gave us a gap from 1926 to 2007. Therefore, Radioteca.cat was brought in.
 
 ### 2.2 Adquistion and Parsing
-The whole process is done in [LINKHERE]\
+The whole process is done in [Data-Parsing-Exploratory-Analysis-2](https://github.com/Data-Science-for-Linguists-2025/Linguistic-Markers-Catalan-Substitution/blob/main/Data-Parsing-Exploratory-Analysis-2.ipynb)|[nbviewer](https://nbviewer.org/github/Data-Science-for-Linguists-2025/Linguistic-Markers-Catalan-Substitution/blob/main/Data-Parsing-Exploratory-Analysis-2.ipynb)\
 Briefly, the acquisition and parsing were:
 
-For CTIC, it was downloaded as separate text files with metadata mixed in. Therefore, it was parsed using Beautiful Soup. The metadata and text pieces were stored in a pandas dataframe. (LINKHERE)
-For Parlament Parla, it was a folder of .tsv files, therefore the data was simply turned into a pandas dataframe. (LINKHERE)
-For ParlaMint-ES-CT, it contained files in many formats. TSV documents were used to acquire the metadata and TXT files for the text content/transcription. Both were loaded into a single pandas dataframe. (LINKHERE)
-For Radioteca.cat, since it's a web library, it was webscraped using Beautiful Soup and a CSV file containing the metadata provided by the owner of the Radioteca project. For the data currently used for the analysis, only shows broadcast before 2012 were taken, as we already had lots of data for the recent years. However, as some gaps were found in the data during the analysis, such as a gap in 2019, in (LINKHERE) and its continuation (LINKHERE), Radioteca.cat was re-scraped, now the complete library. Due to the time constraint, I wasn't able to perform the analysis on the new data. Therefore, the term project analysis and conclusions are using the data from CTIC, Parlament Parla, ParlaMint-ES-CT, and Radioteca.cat up until 2012.
-After acquiring the separate corpora and storing them in dataframes, a single pandas dataframe was created, merging all of them. The texts were also tokenized after the merging using Pitt's supercomputing. The files can be found in (LINKHERE) under "tokenization.*".
-After the acquisition and data parsing, the resulting dataframe was very unbalanced. To reduce the imbalance while avoiding biases, individual speaker contributions were limited to 1500 characters, and for Radioteca, episode contributions were also limited to 1500 characters, ensuring a less topic- and speaker-specific dataframe. This shaping of our data can be found in [LINK].
+For CTIC, it was downloaded as separate text files with metadata mixed in. Therefore, it was parsed using Beautiful Soup. The metadata and text pieces were stored in a pandas dataframe.
+For Parlament Parla, it was a folder of .tsv files, therefore the data was simply turned into a pandas dataframe.
+For ParlaMint-ES-CT, it contained files in many formats. TSV documents were used to acquire the metadata and TXT files for the text content/transcription. Both were loaded into a single pandas dataframe. 
+For Radioteca.cat, since it's a web library, it was webscraped using Beautiful Soup and a CSV file containing the metadata provided by the owner of the Radioteca project. For the data currently used for the analysis, only shows broadcast before 2012 were taken, as we already had lots of data for the recent years. However, as some gaps were found in the data during the analysis, such as a gap in 2019, Radioteca.cat was re-scraped completely, the whole library this time, which can be found in: [Data-Parsing-Exploratory-Analysis-Part1.ipynb](https://github.com/Data-Science-for-Linguists-2025/Linguistic-Markers-Catalan-Substitution/blob/main/Data-Parsing-Exploratory-Analysis-Part1.ipynb) | [nbviewer](https://nbviewer.org/github/Data-Science-for-Linguists-2025/Linguistic-Markers-Catalan-Substitution/blob/main/Data-Parsing-Exploratory-Analysis-Part1.ipynb) and its continuation [CompleteDataFrame.ipynb](https://github.com/Data-Science-for-Linguists-2025/Linguistic-Markers-Catalan-Substitution/blob/main/CompleteDataFrame.ipynb) | [nbviewer](https://nbviewer.org/github/Data-Science-for-Linguists-2025/Linguistic-Markers-Catalan-Substitution/blob/main/CompleteDataFrame.ipynb), which is still in progress. Due to the time constraint, I wasn't able to perform the analysis on the new data. Therefore, the term project analysis and conclusions are using the data from CTIC, Parlament Parla, ParlaMint-ES-CT, and Radioteca.cat up until 2012.
+After acquiring the separate corpora and storing them in dataframes, a single pandas dataframe was created, merging all of them. The texts were also tokenized after the merging using Pitt's supercomputing. The files can be found in under "tokenization.*".
+After the acquisition and data parsing, the resulting dataframe was very unbalanced. To reduce the imbalance while avoiding biases, individual speaker contributions were limited to 1500 characters, and for Radioteca, episode contributions were also limited to 1500 characters, ensuring a less topic- and speaker-specific dataframe.
 
 The resulting dataframe used for the analysis consists of **3 billion tokens** from **75 thousand text-pieces** which are single speaker contributions. 
-
-PUT FREAKIN PLOTS HERE
 
 ## 3. Analysis
 The analysis was performed based on Dr. Junyent's language threatening symptoms mentioned previously. For each of the risk areas, specific elements of Catalan were chosen to be evaluated. These are:
@@ -56,52 +54,45 @@ The analysis was performed based on Dr. Junyent's language threatening symptoms 
 
 Most of the analysis was based on counts per year. Since the raw counts were not very valuable, as the data size per year is very uneven, the counts were always turned into a percentage of the total number of tokens for that text. That is, all of the results are like a "proportion" of the tokens that match our target in that text.
 
+Link to analysis section: [Analysis-1-LowLevel.ipynb](https://github.com/Data-Science-for-Linguists-2025/Linguistic-Markers-Catalan-Substitution/blob/main/Analysis-1-LowLevel.ipynb)|[nbviewer](https://nbviewer.org/github/Data-Science-for-Linguists-2025/Linguistic-Markers-Catalan-Substitution/blob/main/Analysis-1-LowLevel.ipynb)
+
 ### 3.1 Unstressed Pronoun Hi
-LINK TO SECTION
 **Context:** Neutral unstressed pronouns don't exist in Spanish. In Catalan, we have "en" and "hi". Since "hi" does not have any other function than as an unstressed pronoun, it was easier to work with it than "en".
 **Hypothesis:** Since Spanish does not have the neutral unstressed pronoun word class, the frequency of the use of "hi" might be decreasing, and we might be losing that word class.\ 
 **Method:** I looked for "hi" in the token lists using regex. Once found, I stored them in a list and got the count of found "hi" that was turned into a percentage out of the tokens of the text. The percentages were averaged per year to have a yearly percentage of "hi".
 **Results:** There was no significant change in the use of "hi" in our data. Its use doesn't present any trends.
-(PUT PLOT)
 
 ### 3.2.1 Directional verbs "anar" and "venir"
-LINK TO SECTION
 **Context:** Catalan has a clear distinction between motion towards and away from the speaker with "anar" - "to go" and "venir" - "to come". In Spanish, while the distinction exists it is less strict.\
 **Hypothesis:** Since in Spanish the distinction between motion away from and toward the speaker in verbs is less strict, the distinction might be getting blurred with one of the two verbs expanding its use into contexts formerly reserved for the other.\ 
 **Method:** The text was lemmatized so we could find any form of the verbs with their infinitive form. Then, the verbs were found in the lemmatized text and stored in two separate lists in two separate columns. The count for them was calculated and added across the texts belonging to the same yeare and then turned into a percentage out of the total tokens for that year. 
 **Results:** There is a significant change in the use of "anar" which has been increasing over time. However, that has not affected the use of "venir" which is stable all throughout our data. These results support an extension of the verb "anar", whose use has been broadened. However, unlike what we predicted, this has not affected "venir".
-(PUT PLOT)
 
 ### 3.2.2 Perifrastic Past
-LINK TO SECTION
 **Context:** Perifrastic past in Catalan is a verb tense used to express past tense actions that were done in the past and have been finished. It is formed with "anar" in the past tense as the auxiliary plus the main verb in its infinitive form. It is equivalent to Past Simple, which we also have in Catalan.\
 **Hypothesis:** Since in Spanish perifrastic past does not exist, its use might be dropping as we can use other past tenses in its place.\
 **Method:** Using the lemmatized text verbs forms matching the pattern for Perifrastic Past were found using regex. Then they were counted and turned into a percentage being the proportion of Perifrastic Past instances out of the total tokens in that dataframe.
 **Results:** There is no significant change in the use of Perifrastic Past. No tendencies can be found in its use throughout the years.
-(PUT PLOT)
 
 ### 3.2.1 Haver de VS Tenir que
-LINK TO SECTION
 **Context:** In Catalan the periphrase "Haver de" is used for tasks and obligations. In Spanish the periphrase for that context is "Tener que", which would be literally translated to Catalan as "Tenir que", as "tenir" is "tener", both meaning "to have".
 **Hypothesis:** Since in Catalan we have a literal translation of "Tener que" from Spanish, we might be using "Tenir que" as a literal translation instead of "Haver de".\
 **Method:** Turned the lemmatized text into a bigram list where I looked for matching "haver de" and "tenir que". I stored them in separate lists in separate columns. Then counted them per year and turned them into the proportion out of the total tokens for that year so they could be compared.
 **Results:** There is no significant change in the use of "Haver de" and no increase in the use of the literal translation "Tenir que", which is barely found in our data.
-(PUT PLOT)
 
 ### 3.3.2 Pronominalized Verbs
-LINK TO SECTION
 **Context:** Both Catalan and Spanish have pronominalized verbs, where the verb requires a pronoun. In Spanish, movement verbs are pronominalized, while in Catalan they are not.\
 **Hypothesis:** Verb pronominalization might be increasing due to Spanish influence, as we might be pronominalizing verbs that used to not be pronominal.\
 **Method:** Created a (POS tag, word) tuple list, then looked for verbs and clitics preceding and following them, as in Catalan, pronouns working with pronominal verbs are clitics.
 **Results:** There is no significant change in verb pronominalization through time. 
-(PUT PLOT)
+![png](image_files/output_8_0.png)
 
 ## 4. Conclusion
 This project aimed to find traces of Catalan's substitution in language by looking at different elements of the language that could point to and help us analyze and quantify its substitution. Out of the five different features of Catalan at the different levels of language explored in the project, one of them showed some significant results, even though it did not allow us to see traces of substitution. The analysis on Time and Space Lexicon modification uncovered a meaning extension for the directional verb "anar." Still, no substitution was observed, as it did not substitute "venir", whose use stayed consistent throughout the years. No relevant variation or changes were found that mark Loss of Word Classes or Syntactic Restructuring through the specific pieces analyzed.
 
 # 5. Further
 While none of the analysis portions allowed us to see substitution happen through time, I believe that the imbalanced data and the different genres of text did not help us get the results we were aiming for. In view of that, I'm considering using only the full Radioteca as a data source, as it is a very extensive resource and has a very specific genre and style. Moreover, it is a direct transcription of radio broadcasts, which is closer to spoken daily language than a prepared ceremonial speech or a discussion at the parliament, which are rehearsed, prepared, and formalized.
-Also, after the first analysis, a second part was done, training 3 models. Two Naive Bayes classifiers on tf-idf features were trained, which allowed us to classify the texts belonging to different time periods, and can be found in [POSAR LINK]. A Random Forest model was also trained using the percentages of our chosen and analyzed features, but it did not have a very good accuracy, which matches our mostly insignificant results.
+Also, after the first analysis, a second part was done, training 3 models. Two Naive Bayes classifiers on tf-idf features were trained, which allowed us to classify the texts belonging to different time periods, and can be found in [Analysis-2-TextLevel.ipynb](https://github.com/Data-Science-for-Linguists-2025/Linguistic-Markers-Catalan-Substitution/blob/main/Analysis-2-TextLevel.ipynb) | [nbviewer](https://nbviewer.org/github/Data-Science-for-Linguists-2025/Linguistic-Markers-Catalan-Substitution/blob/main/Analysis-2-TextLevel.ipynb). A Random Forest model was also trained using the percentages of our chosen and analyzed features, but it did not have a very good accuracy, which matches our mostly insignificant results.
 
 ## 5. Challenges and Setbacks
 The biggest challenge working with this project was trying to get the data to be more balanced. I tried different methods to reduce the amount of data in the most recent years, still, it wasn't effective enough. Working with this big amount of data was also problematic, as tokenization and any step requiring Stanza had to be done using Supercomputing. However, both challenges are natural considering we wanted to analyze variation through time, which required a big amount of data and old data that is not easily found.

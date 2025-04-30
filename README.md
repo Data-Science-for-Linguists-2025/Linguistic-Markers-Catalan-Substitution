@@ -14,7 +14,7 @@ The resulting data consists of about three billion tokens from seventy-five thou
 This information is subject to change due to some issues found during the analysis. However, since the analysis portion hasn't been re-done with the newly acquired, parsed, and explored data frame, for now, the data used is what was stated before. 
 
 ## Directory:
-- **[final_report.md](final_report.md)**: **TO DO** Concluding report of the project for term submission
+- **[final_report.md](https://github.com/Data-Science-for-Linguists-2025/Linguistic-Markers-Catalan-Substitution/blob/main/final_report.md)**: Concluding report of the project for term submission
 - [README.md](README.md): the readme file for this project
 
 The following files have been listed in chronological order, they follow the timeline of the project work:
@@ -28,7 +28,7 @@ The following files have been listed in chronological order, they follow the tim
     - Analysis-1-LowLevel.ipynb [github](https://github.com/Data-Science-for-Linguists-2025/Linguistic-Markers-Catalan-Substitution/blob/main/Analysis-1-LowLevel.ipynb) | [nbviewer](https://nbviewer.org/github/Data-Science-for-Linguists-2025/Linguistic-Markers-Catalan-Substitution/blob/main/Analysis-1-LowLevel.ipynb): Lexical, Morphological and Syntactic analysis. 
     - Analysis-2-TextLevel.ipynb [github](https://github.com/Data-Science-for-Linguists-2025/Linguistic-Markers-Catalan-Substitution/blob/main/Analysis-2-TextLevel.ipynb) | [nbviewer](https://nbviewer.org/github/Data-Science-for-Linguists-2025/Linguistic-Markers-Catalan-Substitution/blob/main/Analysis-2-TextLevel.ipynb): Machine learning focused analysis of the data using tf-idf features and our features.
 - [data_samples](https://github.com/Data-Science-for-Linguists-2025/Linguistic-Markers-Catalan-Substitution/tree/main/data_samples): folder containing a sample data file for each of the corpora
-- [images](POSARLINK): **TO DO**
+- [images](https://github.com/Data-Science-for-Linguists-2025/Linguistic-Markers-Catalan-Substitution/tree/main/images)
 - [scripts](https://github.com/Data-Science-for-Linguists-2025/Linguistic-Markers-Catalan-Substitution/tree/main/scripts): folder containing python (.py) and slurm (.sh) files used for processing the data using Pitt's CRC
 - [Linguistic-Markers-of-Substitution_Presentation.pdf](https://github.com/Data-Science-for-Linguists-2025/Linguistic-Markers-Catalan-Substitution/blob/main/Linguistic-Markers-of-Substitution_Presentation.pdf): slides for the presentation of the project
 - [LICENSE.md](LICENSE.md): MIT License for the Project

@@ -58,39 +58,44 @@ Most of the analysis was based on counts per year. Since the raw counts were not
 Link to analysis section: [Analysis-1-LowLevel.ipynb](https://github.com/Data-Science-for-Linguists-2025/Linguistic-Markers-Catalan-Substitution/blob/main/Analysis-1-LowLevel.ipynb)|[nbviewer](https://nbviewer.org/github/Data-Science-for-Linguists-2025/Linguistic-Markers-Catalan-Substitution/blob/main/Analysis-1-LowLevel.ipynb)
 
 ### 3.1 Unstressed Pronoun Hi
-**Context:** Neutral unstressed pronouns don't exist in Spanish. In Catalan, we have "en" and "hi". Since "hi" does not have any other function than as an unstressed pronoun, it was easier to work with it than "en".
-**Hypothesis:** Since Spanish does not have the neutral unstressed pronoun word class, the frequency of the use of "hi" might be decreasing, and we might be losing that word class.\ 
-**Method:** I looked for "hi" in the token lists using regex. Once found, I stored them in a list and got the count of found "hi" that was turned into a percentage out of the tokens of the text. The percentages were averaged per year to have a yearly percentage of "hi".
+**Context:** Neutral unstressed pronouns don't exist in Spanish. In Catalan, we have "en" and "hi". Since "hi" does not have any other function than as an unstressed pronoun, it was easier to work with it than "en".\
+**Hypothesis:** Since Spanish does not have the neutral unstressed pronoun word class, the frequency of the use of "hi" might be decreasing, and we might be losing that word class.\
+**Method:** I looked for "hi" in the token lists using regex. Once found, I stored them in a list and got the count of found "hi" that was turned into a percentage out of the tokens of the text. The percentages were averaged per year to have a yearly percentage of "hi".\
 **Results:** There was no significant change in the use of "hi" in our data. Its use doesn't present any trends.
+
 ![png](images/PronomFebleHi_Bar.png)
 
 ### 3.2.1 Directional verbs "anar" and "venir"
 **Context:** Catalan has a clear distinction between motion towards and away from the speaker with "anar" - "to go" and "venir" - "to come". In Spanish, while the distinction exists it is less strict.\
-**Hypothesis:** Since in Spanish the distinction between motion away from and toward the speaker in verbs is less strict, the distinction might be getting blurred with one of the two verbs expanding its use into contexts formerly reserved for the other.\ 
-**Method:** The text was lemmatized so we could find any form of the verbs with their infinitive form. Then, the verbs were found in the lemmatized text and stored in two separate lists in two separate columns. The count for them was calculated and added across the texts belonging to the same yeare and then turned into a percentage out of the total tokens for that year. 
+**Hypothesis:** Since in Spanish the distinction between motion away from and toward the speaker in verbs is less strict, the distinction might be getting blurred with one of the two verbs expanding its use into contexts formerly reserved for the other.\
+**Method:** The text was lemmatized so we could find any form of the verbs with their infinitive form. Then, the verbs were found in the lemmatized text and stored in two separate lists in two separate columns. The count for them was calculated and added across the texts belonging to the same yeare and then turned into a percentage out of the total tokens for that year.\
 **Results:** There is a significant change in the use of "anar" which has been increasing over time. However, that has not affected the use of "venir" which is stable all throughout our data. These results support an extension of the verb "anar", whose use has been broadened. However, unlike what we predicted, this has not affected "venir".
+
 ![png](images/AnarVenir_Regression.png)
 ![png](images/AnarVenir_Bar.png)
 
 ### 3.2.2 Perifrastic Past
 **Context:** Perifrastic past in Catalan is a verb tense used to express past tense actions that were done in the past and have been finished. It is formed with "anar" in the past tense as the auxiliary plus the main verb in its infinitive form. It is equivalent to Past Simple, which we also have in Catalan.\
 **Hypothesis:** Since in Spanish perifrastic past does not exist, its use might be dropping as we can use other past tenses in its place.\
-**Method:** Using the lemmatized text verbs forms matching the pattern for Perifrastic Past were found using regex. Then they were counted and turned into a percentage being the proportion of Perifrastic Past instances out of the total tokens in that dataframe.
+**Method:** Using the lemmatized text verbs forms matching the pattern for Perifrastic Past were found using regex. Then they were counted and turned into a percentage being the proportion of Perifrastic Past instances out of the total tokens in that dataframe.\
 **Results:** There is no significant change in the use of Perifrastic Past. No tendencies can be found in its use throughout the years.
+
 ![png](images/PassatPerifrastic_Bar.png)
 
 ### 3.2.1 Haver de VS Tenir que
-**Context:** In Catalan the periphrase "Haver de" is used for tasks and obligations. In Spanish the periphrase for that context is "Tener que", which would be literally translated to Catalan as "Tenir que", as "tenir" is "tener", both meaning "to have".
+**Context:** In Catalan the periphrase "Haver de" is used for tasks and obligations. In Spanish the periphrase for that context is "Tener que", which would be literally translated to Catalan as "Tenir que", as "tenir" is "tener", both meaning "to have".\
 **Hypothesis:** Since in Catalan we have a literal translation of "Tener que" from Spanish, we might be using "Tenir que" as a literal translation instead of "Haver de".\
-**Method:** Turned the lemmatized text into a bigram list where I looked for matching "haver de" and "tenir que". I stored them in separate lists in separate columns. Then counted them per year and turned them into the proportion out of the total tokens for that year so they could be compared.
+**Method:** Turned the lemmatized text into a bigram list where I looked for matching "haver de" and "tenir que". I stored them in separate lists in separate columns. Then counted them per year and turned them into the proportion out of the total tokens for that year so they could be compared.\
 **Results:** There is no significant change in the use of "Haver de" and no increase in the use of the literal translation "Tenir que", which is barely found in our data.
+
 ![png](images/HaverTenir_Bar.png)
 
 ### 3.3.2 Pronominalized Verbs
 **Context:** Both Catalan and Spanish have pronominalized verbs, where the verb requires a pronoun. In Spanish, movement verbs are pronominalized, while in Catalan they are not.\
 **Hypothesis:** Verb pronominalization might be increasing due to Spanish influence, as we might be pronominalizing verbs that used to not be pronominal.\
-**Method:** Created a (POS tag, word) tuple list, then looked for verbs and clitics preceding and following them, as in Catalan, pronouns working with pronominal verbs are clitics.
+**Method:** Created a (POS tag, word) tuple list, then looked for verbs and clitics preceding and following them, as in Catalan, pronouns working with pronominal verbs are clitics.\
 **Results:** There is no significant change in verb pronominalization through time. 
+
 ![png](images/Pronominalized_Bar.png)
 
 ## 4. Conclusion
